@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Saurabh suite" parallel="tests" thread-count="2"> 
+	
+	<parameter name= "URL" value="Google.com"/>
+	<listeners>
+		<listener class-name="Saurabhpackage.Listeners"/>
+	</listeners>
+	
+	
+	
+	
+  <test thread-count="5" name="Ashu">
+	  <parameter name= "URL" value="Amazon.com"/>
+    <classes>
+      <class name="Saurabhpackage.Testngday1"/>
+      <class name="Saurabhpackage.Testngday2"/> 
+    </classes>
+  </test> 
+  
+  <test thread-count="5" name="Ashu1">
+	   <parameter name= "URL" value="Flipkart.com"/>
+	   <parameter name="API" value="123456"/>
+    <classes>
+      <class name="Saurabhpackage.Testngday3">
+      <methods>
+		  
+		  <include name="newDemo"/>
+		  <include name="oldDemo"/>
+		  	  </methods>
+      
+      </class>
+      
+      
+      
+       
+      <class name="Saurabhpackage.Testngday4"> 
+		  
+		  <methods>
+			  <exclude name="Demo6"/>
+			  <exclude name="look.*"/>
+			    </methods>
+		  
+		  </class>
+      
+      </classes>
+    
+  </test> 
+  
+  
+  
+  
+  
+  
+  
+</suite> 
